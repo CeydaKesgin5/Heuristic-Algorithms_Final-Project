@@ -19,8 +19,8 @@ processing_time = {
 alpha = 1       # Feromon etkisi
 beta = 2        # Sezgisel bilginin etkisi
 rho = 0.5       # Buharlaşma oranı
-num_ants = 5    # Karınca sayısı
-num_iterations = 50  # Iterasyon sayısı
+num_ants = 20   # Karınca sayısı
+num_iterations = 300  # Iterasyon sayısı
 Q = 100         # Feromon güncelleme sabiti
 
 # Feromon matrisini başlat
@@ -158,7 +158,7 @@ def ant_colony_bin_packing(items, bin_capacity, num_ants, num_iterations):
 items = [5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60]
 bin_capacity = 100
 num_ants = 20
-num_iterations = 200
+num_iterations = 300
 
 best_solution, best_bins_used = ant_colony_bin_packing(items, bin_capacity, num_ants, num_iterations)
 
@@ -184,8 +184,8 @@ subsets = [
 ]
 
 # ACO Parametreleri
-num_ants = 10
-num_iterations = 50
+num_ants = 20
+num_iterations = 300
 alpha = 1  # Feromonun etkisi
 beta = 2   # Sezgiselliğin etkisi
 evaporation_rate = 0.5
@@ -357,9 +357,9 @@ items = [
         (25, 140), (47, 170), (67, 240), (85, 290), (93, 330), (60, 200), (43, 160), (99, 370),
         (29, 130), (95, 310), (77, 280), (62, 250), (49, 180), (60, 170), (73, 290), (80, 320)
     ]
-capacity = 50
+capacity = 510
 num_ants = 20
-num_iterations = 200
+num_iterations = 300
 
 best_solution, best_value = ant_colony_knapsack(items, capacity, num_ants, num_iterations)
 

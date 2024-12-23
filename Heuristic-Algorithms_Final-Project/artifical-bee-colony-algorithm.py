@@ -444,8 +444,8 @@ def run_all_tests():
     print("Running tests for all ABC algorithms...")
     print("=" * 50)
 
-    num_bees = 30
-    max_iterations = 500
+    num_bees = 20
+    max_iterations = 300
 
     # # Test 1: Bin Packing
     # print("\nTest 1: Bin Packing Problem")

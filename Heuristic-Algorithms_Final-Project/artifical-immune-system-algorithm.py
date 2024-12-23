@@ -342,9 +342,9 @@ class JobSchedulingAIS:
 if __name__ == "__main__":
     # Test Bin Packing
     items = [5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60]
-    bin_capacity = 100
+    bin_capacity = 20
     population_size = 50
-    max_generations = 500
+    max_generations = 300
     bin_packing = BinPackingAIS(items, bin_capacity, population_size, max_generations)
     bin_packing.run()
 
@@ -363,7 +363,7 @@ if __name__ == "__main__":
         (25, 140), (47, 170), (67, 240), (85, 290), (93, 330), (60, 200), (43, 160), (99, 370),
         (29, 130), (95, 310), (77, 280), (62, 250), (49, 180), (60, 170), (73, 290), (80, 320)
     ]
-    knapsack_capacity = 560
+    knapsack_capacity = 510
     knapsack = KnapsackAIS(items_knapsack, knapsack_capacity, population_size, max_generations)
     knapsack.run()
 

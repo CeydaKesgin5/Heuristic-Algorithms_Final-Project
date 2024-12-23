@@ -204,7 +204,7 @@ def set_cover_tabu(universe, subsets, num_iterations, tabu_size):
 # Job Scheduling
 job_times = [2, 5, 3, 7, 1, 4]
 num_machines = 3
-job_history, job_population = job_scheduling_tabu(job_times, num_machines, 10, 5)
+job_history, job_population = job_scheduling_tabu(job_times, num_machines, 300, 20)
 
 # Knapsack
 data = [
@@ -219,18 +219,18 @@ data = [
 # values ve weights listelerini ayır
 values = [item[0] for item in data]
 weights = [item[1] for item in data]
-capacity = 50
-knapsack_history, knapsack_population = knapsack_tabu(values, weights, capacity, 10, 5)
+capacity = 510
+knapsack_history, knapsack_population = knapsack_tabu(values, weights, capacity, 300, 20)
 
 # Bin Packing
 items = [5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60]
 bin_capacity = 10
-bin_history, bin_population = bin_packing_tabu(items, bin_capacity, 10, 5)
+bin_history, bin_population = bin_packing_tabu(items, bin_capacity, 300, 20)
 
 # Set Cover
 universe = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15}
 subsets = [{1, 2, 3}, {2, 3, 4}, {4, 5, 6}, {6, 7, 8}, {8, 9, 10}, {10, 11, 12}, {13, 14, 15}]
-set_cover_history, set_cover_population = set_cover_tabu(universe, subsets, 10, 5)
+set_cover_history, set_cover_population = set_cover_tabu(universe, subsets, 300, 20)
 
 # Extracting best solutions
 best_job_schedule = job_history[-1][1]
